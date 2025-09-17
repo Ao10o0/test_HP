@@ -1,0 +1,475 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p,
+form, input, div {
+  margin: 0;
+  padding: 0;
+	box-sizing: border-box
+}
+
+
+body{
+  font-family: "Noto Serif JP", serif;
+  font-weight: 300;
+  font-style: normal;
+	wbackground-color:#FAFAF6;
+	width: 100vw;
+	color:#67624d; 
+	
+}
+	
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+	display: block;
+}
+
+.header{
+	position:fixed;
+}
+
+.wave_header{
+	container-type:inline-size;
+	container-name:head;
+	position: relative;
+	z-index:5;
+	width: 100%;
+	background-color:transparent;
+	align-items:center;
+	justify-content:center;
+	padding-top:0rem;
+	padding-bottom:9rem;
+}
+
+.wave_index {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateY(0); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  font-size: 16px;
+  color: white;
+  max-width:100%;
+  gap:3rem;
+}
+
+.button{
+	transition: transform 0.3s ease; 
+	z-index: 1001;
+	width:15%;
+	max-width:100%;
+	height:auto;
+	display:block;
+	height: auto;
+}
+
+.button:hover {
+	transform:scale(1.1) rotate(2deg);
+}
+
+
+.logo {
+  z-index: 1100;
+  width:40%; 
+  margin-top: 15%;
+ 
+  flex-direction: column;
+  align-items: center;
+  white-space: nowrap;	
+	padding: 1rem 0;
+}
+
+.intro {
+  display: flex;  
+	text-align:center;
+	line-height:1.5;
+  flex-direction: column;
+  align-items: center;
+  white-space: nowrap;	
+	color:#67624d;
+	padding-bottom: 5%;;
+	width: 90%;
+	margin-inline:auto;
+	margin-top:-50%;
+}
+
+.intro h2{
+	font-size:8px;
+}
+
+.links{
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	gap:1.25rem;
+	width: 90%;
+	margin: 1rem auto;
+}
+
+.skill-title {
+	font-size: 1.5em;
+	padding-bottom: 1rem;	
+	margin-top:-1rem;
+	
+}
+
+.skill-title::before,
+.skill-title::after{
+	content: "○●○●○●○";
+	letter-spacing: 1em;	
+	color:#d2eae2;
+	font-size: 0.2em;
+	margin: 1em;
+	text-align: center;
+	margin-top:-1rem; 
+}
+
+.skill-title::before｛
+	margin-right:1em;
+｝
+
+
+@media(min-width:600px){
+	.links{
+		grid-template-columns: repeat(4,1fr);
+	}
+}
+
+.card{
+	background: #d2eae2;
+	border-radius: 1rem;
+	padding: 1.25rem;
+	text-align: center;
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card .icon{
+	width: 64px;
+	height:64px;
+	margin-bottom:  0.5rem;
+	border-radius: 1rem;
+	align-items:center;
+	margin-inline:auto; 
+	object-fit: contain;
+	display: block;
+}
+
+.card img .icon{
+	margin-bottom: 0.5rem;
+}
+
+.card:hover{
+	transform: scale(0.95);
+	box-shadow: 0.6px 5px rgba(103,98,77,0.1)
+}
+
+.card h2{
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
+	color:#67624d;
+	font-weight: bold;
+}
+
+.card p{
+		font-size: 1rem;
+	margin-bottom: 0.5rem;
+	color:#67624d;
+}
+
+.card a{
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
+	border: #67624d;
+	border-radius: 1rem;
+	color:#fff;
+}
+
+.skill-cards{
+		display: grid;
+	grid-template-columns: repeat(2,1fr);
+	gap:1.25rem;
+	width: 90%;
+	margin: 1rem auto;
+	align-items: stretch;
+}
+
+.skill-cards img{
+		border-radius: 1rem;
+}
+
+.skills{
+	align-items:center;
+		flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	margin-inline:auto; 
+	object-fit: contain;
+	grid-template-columns: repeat(2,1fr);
+	gap:1.25rem;
+	width: 90%;
+	margin: 1rem auto;
+	transition: transform 0.25s ease;
+	margin-top:10%;
+	
+}
+
+@media(min-width:600px){	
+.skill-cards{
+		grid-template-columns: repeat(4,1fr);
+	}
+}
+
+.skills-card{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding-bottom: 1rem;
+	justify-content: space-between;
+}
+
+.skills-card h3,
+.skills-card p{
+	margin: 0;
+}
+
+.skills-card h3{
+	line-height: 1.2;
+	margin: 0.65rem 0 0;
+	text-align: center;
+}
+
+.skills-card p{
+	line-height: 1.75;
+	margin: 0.4rem 0 0;
+	text-align: center;
+	overflow-wrap:anywhere;word-break:normal;
+}
+
+.skills-card:hover{
+	transform: scale(0.95);
+	transition: transform 0.25s ease;
+}
+
+.wave_footer{
+	width:100%;
+	position:relative;
+	height: auto;
+	bottom: 0;
+	
+}
+
+.footer_contents {
+  text-align: center;
+}
+
+.footer_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sns_links {
+	position: absolute;
+  	display: flex;
+  	gap: 3em;
+  	list-style: none;
+  	padding: 0;
+	z-index:9999;
+	left: 45%;
+	bottom:5%;
+
+}
+
+.sns_links li a {
+  text-decoration: none;
+  color:white; 
+  font-size: 1.5rem;
+	border-bottom: 4px dotted white;
+	font-weight: bold;
+}
+
+.wave_footer{
+	width:100%;
+	position:relative;
+	height: auto;
+}
+
+.wave_footer svg {
+	position: absolute;
+    width: 100%;
+	left:0;
+	right: 0;
+	bottom:0;
+	height: auto;
+	z-index: 0;
+	pointer-events: none;
+
+}
+
+.footer_contents {
+	position: relative;
+	z-index: 1;
+	min-height: clamp(180px,24vw,320px);
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-content: center;
+	text-align: center;
+	bottom: 0;
+	
+}
+
+.footer_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sns_links {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: baseline;
+	text-align: center;
+	gap:3rem;
+	list-style:none;
+	padding:0;
+	margin-bottom:3%;
+}
+
+.sns_links li a {
+	font-size: 12px;
+	color: #fff;
+	text-decoration: none;
+	font-weight: 700;
+	border-bottom: 3px dotted #fff;
+	z-index: 1;
+	position: absolute;
+	display: flex;
+}
+
+
+
+@keyframes floatY{
+	0% {transform:translateY(0);}
+	50% {transform:translateY(1rem);}
+	100% {transform:translateY(0);}
+}
+
+@media (min-width:1024px){
+.links{
+	grid-template-columns: repeat(4,1fr);
+}
+	
+	.title{
+		margin-top: -15%;
+	}
+
+	.wave_header{
+		padding-bottom:-5rem;
+	}
+	
+	.wave_index {
+		font-size: 2.2em;
+		gap:14rem;	
+		top:10%;
+	}
+	
+	.logo {
+		width: 25%;
+	}
+	
+	.intro{
+		line-height: 2	
+	}
+	
+	.intro h2{
+		font-size: 18px;		
+	}
+	
+	.logo_text h3 {
+		font-size:20px;
+	}
+
+	.intro {
+		margin-top: -30%;
+	}
+
+	
+	.sns_links li a {
+	font-size: 22px;
+	}
+	
+}
+
+@media (min-width:600px) and (max-width:1023px){
+	.links{
+	grid-template-columns: repeat(4,1fr);
+}
+
+	.title{
+		margin-top: -25%;
+	}
+	
+	.wave_header{
+		padding-bottom: -4rem;
+	}	
+
+	.wave_index {
+		font-size: 1.5em;
+		gap:7rem;	
+		top:9%;
+	}
+		
+	.logo {
+		width: 30%;
+		margin-top: -10%;
+	}
+	
+	.intro {
+		margin-top: -20%;
+	}
+	
+	.dot{
+		margin: 1rem auto;
+	}
+	
+	.skill-title {
+	font-size: 1.5em;
+	padding-bottom: 1rem;	
+	margin-top:-1rem;
+	
+}
+
+	.skill-title::before,
+	.skill-title::after{
+		letter-spacing: 1em;	
+		font-size: 0.5em;
+}
+
+	.sns_links {
+	margin-bottom: 5%;
+	}		
+	
+	.sns_links li a {
+	font-size: 18px;
+	}	
+	
+}
